@@ -8,5 +8,5 @@
 
 ## RN (Regras de Negócio)
 - [x] A transação deve ser do tipo crédito (somará ao valor total) ou débito(subtrairá ao valor total);
-- [] Deve ser possível identificarmos o usuário entre as requisições;
-- [] O usuário só pode visualizar transações a qual ele criou;
+- [ ] Deve ser possível identificarmos o usuário entre as requisições;
+- [ ] O usuário só pode visualizar transações a qual ele criou;
