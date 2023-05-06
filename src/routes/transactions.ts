@@ -86,7 +86,7 @@ export async function transactionsRoutes(app: FastifyInstance) {
         {
           // options
           path: '/', // rotas que poderão utilizar esse cookie (/ = todas)
-          maxAge: 1000 * 60 * 60 * 24 * 7, // 7 dias em milisegundos
+          maxAge: 60 * 60 * 24 * 7, // 7 dias em segundos
         },
       )
     }
