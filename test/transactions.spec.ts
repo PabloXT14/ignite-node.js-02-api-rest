@@ -14,8 +14,8 @@ describe('Transactions routes', () => {
   })
 
   beforeEach(() => {
-    execSync('npm run knex -- migrate:rollback --all') // desfazendo todas as migrações (apagando todas as tabelas)
-    execSync('npm run knex -- migrate:latest') // refazendo as migrações (recriando todas as tabelas)
+    execSync('npm run knex migrate:rollback --all') // desfazendo todas as migrações (apagando todas as tabelas)
+    execSync('npm run knex migrate:latest') // refazendo as migrações (recriando todas as tabelas)
   })
 
   it('should user be able to create a new transaction', async () => {
