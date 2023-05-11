@@ -32,6 +32,7 @@
 
 <p align="center">
  <a href="#-about">About</a> |
+ <a href="#-functionalities">Functionalities</a> |
  <a href="#-deploy">Deploy</a> | 
  <a href="#-how-it-works">How It Works</a> | 
  <a href="#-technologies">Technologies</a> | 
@@ -41,17 +42,13 @@
 
 ## 💻 About
 
-Este é o repositório de uma API Node.js, que tem como objetivo realizar o CRUD de tasks(tarefas). O projeto tem como finalidade treinar conceitos fundamentais do Node.js, tais como:
-
-- Utilização do módulo nativo `http` para criar um `servidor` e `rotas`.
-- Utilização de `streams` para transmitir dados em partes.
-- Utilização de `middlewares` para verificação, conversão e tratamento de erros, melhorarando assim a segurança da aplicação.
+Este é o repositório de uma API REST feita em Node.js, no qual os principais objetivos foram utilizar o microframework `Fastify`, a linguagem `TypeScript`, o Query Builder `Knex.js`, validação de dados com o `Zod`, além de outras ferramentas para auxiliar durante o desenvolvimento.
 
 Vale ressaltar que este projeto foi desenvolvido como conclusão de um desafio proposto pela trilha/curso **Ignite** oferecido pela [Rocketseat](https://www.rocketseat.com.br/).
 
 ---
 
-### Functionalities
+## ⚙ Functionalities
 
 ### RF (Requisitos Funcionais)
 - [x] O usuário deve poder criar uma nova transação;
@@ -90,10 +87,10 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ```bash
 # Clone este repositório
-$ git clone git@github.com:pabloxt14/Ignite_Node.js_01-Challenge_Fundamentos_do_Node.js.git
+$ git clone git@github.com:pabloxt14/ignite-node.js-02-api-rest.git
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd Ignite_Node.js_01-Challenge_Fundamentos_do_Node.js
+$ cd ignite-node.js-02-api-rest
 
 # Instale as dependências
 $ npm install
@@ -109,12 +106,10 @@ $ npm run dev
 
 | Método | Rota	| Descrição	| Parâmetros |
 | --- | --- | --- | --- |
-| POST | /tasks | Cria uma nova tarefa | `title`, `description` |
-| GET | /tasks | Retorna todas as tarefas cadastradas; Ou somente as terfas que apresentarem no `title` ou `description` o valor enviado no parâmetro `search` | `search`(opcional) |
-| PUT | /tasks/:id | Atualiza uma tarefa específica | `id`,`title`,`description` |
-| DELETE | /tasks/:id | Deleta uma tarefa específica | `id` |
-| PATCH | /tasks/:id | Conclui/Desfaz uma tarefa específica | `id` |
-| POST | /tasks/import | Cria um conjunto de tarefas especificadas em um arquivo `csv` | `file`(multipart/form-data) |
+| POST | /transactions | Cria uma nova transação | `title`, `amount`, `type`(credit,debit) |
+| GET | /transactions | Retorna todas as transações de um usuários específico | `sessionId`(cookie) |
+| GET | /transactions/:id | Retorna uma tarefa específica | `id`, `sessionId`(cookie) |
+| GET | /transactions/summary | Resumo das transações de um usuário | `sessionId`(cookie) |
 
 > Obs: todos os parâmetros enviados e respondidos no corpo da requisição e resposta estão no formato `JSON`.
 
@@ -122,27 +117,29 @@ $ npm run dev
 
 ## 🛠 Technologies
 
-As seguintes ferramentas foram usadas na construção do projeto:
+As seguintes principais ferramentas foram usadas na construção do projeto:
 
 #### **Server**  ([NodeJS](https://nodejs.org/en/))
 
--   **[Multer](https://www.npmjs.com/package/multer)**
--   **[csv-parse](https://www.npmjs.com/package/csv-parse)**
+-   **[Fastify](https://www.fastify.io/)**
+-   **[TypeScript](https://www.typescriptlang.org/)**
+-   **[Zod](https://github.com/colinhacks/zod)**
+-   **[Knex.js](https://knexjs.org/)**
+-   **[SQLite](https://sqlite.org/index.html)**
+-   **[PostgreSQL](https://www.postgresql.org/)**
+-   **[TSX](https://github.com/esbuild-kit/tsx)**
+-   **[TSUP](https://tsup.egoist.dev/)**
+-   **[ESLint](https://eslint.org/)**
+-   **[Dotenv](https://github.com/motdotla/dotenv)**
+-   **[Vitest](https://vitest.dev/)**
+-   **[Supertest](https://github.com/ladjs/supertest)**
 
 > Veja o arquivo [package.json](./package.json) para mais detalhes sobre as dependências utilizadas no projeto.
 ---
 
 ## ✍ Author
 
-<a href="https://github.com/PabloXT14">
-  <img alt="PabloXT14" title="PabloXT14" src="https://github.com/PabloXT14.png" width="100px" />
-  <br />
-  <sub>
-    <strong>Pablo Alan</strong> 🚀
-  </sub>
-</a>
-
-<br />
+<img alt="Perfil Github" title="Perfil Github" src="https://github.com/PabloXT14.png" width="100px" />
 
 [![Linkedin Badge](https://img.shields.io/badge/-Pablo_Alan-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/pabloalan/)](https://www.linkedin.com/in/pabloalan/)
 
