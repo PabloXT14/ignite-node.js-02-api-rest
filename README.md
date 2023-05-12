@@ -65,7 +65,7 @@ Vale ressaltar que este projeto foi desenvolvido como conclusão de um desafio p
 
 ## 🔗 Deploy
 
-A API pode ser acessada através da seguinte URL base: https://ignite-node-challenge-01.onrender.com
+A API pode ser acessada através da seguinte URL base: https://ignite-node-js-02-api-rest.vercel.app/
 
 > Obs: a aplicação pode demorar um pouco para entrar na primeira execução depois de um tempo, devido ao back-end estar rodando através do plano gratuito na plataforma de hospedagem.
 
@@ -110,6 +110,8 @@ $ npm run dev
 | GET | /transactions | Retorna todas as transações de um usuários específico | `sessionId`(cookie) |
 | GET | /transactions/:id | Retorna uma tarefa específica | `id`, `sessionId`(cookie) |
 | GET | /transactions/summary | Resumo das transações de um usuário | `sessionId`(cookie) |
+| PUT | /transactions/:id | Atualiza uma tarefa específica | `id`, `sessionId`(cookie), `title`(opcional), `amount`(opcional), `type`(credit,debit) |
+| DELETE | /transactions/:id | Deleta uma tarefa específica | `id`, `sessionId`(cookie) |
 
 > Obs: todos os parâmetros enviados e respondidos no corpo da requisição e resposta estão no formato `JSON`.
 
