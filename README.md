@@ -27,7 +27,7 @@
 </p>
 
 <h4 align="center"> 
-	🚧 Aplicação em Desenvolvimento 🚧
+	🚀 Aplicação Finalizada 🚀
 </h4>
 
 <p align="center">
